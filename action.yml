@@ -83,9 +83,9 @@ inputs:
     required: false
     default: ''
 runs:
-  using: docker
-  # image: docker://kubevious/cli:1.0.64
-  image: Dockerfile
+  using: 'docker'
+  image: 'docker://ghcr.io/step-security/kubevious-cli-action:v1.0.64@sha256:05097b7de8b4321a1143cb989f1537dcfad6d8bcbdb8d11502e0771e6b971319' # v1.0.64
+
 branding:
   icon: 'shield'
   color: 'green'
