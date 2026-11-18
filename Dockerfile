@@ -1,6 +1,6 @@
 ###############################################################################
 # Step 1 : Builder image
-FROM kubevious/node-builder:24
+FROM kubevious/node-builder:24@sha256:e64dd91a6d1b48f3b1386d6b09b441aee40658220f28f1d4790ba134ab32235a
 RUN node --version
 RUN npm --version
 RUN yarn --version
@@ -27,7 +27,7 @@ RUN mv kubevious-$(node -p -e "require('./package.json').version").tgz kubevious
 
 ###############################################################################
 # Step 2 : Runner image
-FROM node:24-alpine
+FROM node:24-alpine@sha256:116b800c3754b440ee0aa3ed2f20f5bf3d99a554bfd9adeea09ea8017f6e85f5
 RUN apk update && apk upgrade && \
     apk --no-cache add ca-certificates bash openssl git curl wget jq
 # DATA

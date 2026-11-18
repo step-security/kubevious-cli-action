@@ -7,11 +7,16 @@ jobs:
     runs-on: ubuntu-latest
     name: Validation Run
     steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
+
       - name: Checkout
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Checkout Carvel-YTT
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: vmware-tanzu/carvel-ytt
           path: carvel-ytt.git
@@ -19,7 +24,7 @@ jobs:
 
       - name: Run Carvel-YTT
         id: carvel-ytt-template
-        uses: vmware-tanzu/carvel-setup-action@v2
+        uses: vmware-tanzu/carvel-setup-action@a173dc9b83a0de22af92463294fb66b904d8b2a3 # v2.0.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - run: |
