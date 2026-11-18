@@ -1,0 +1,195 @@
+GHSA-23hp-3jrh-7fpw
+GHSA-34x7-hfp2-rc4v
+GHSA-83g3-92jg-28cx
+GHSA-8qq5-rm4j-mr97
+GHSA-8x88-c5mf-7j5w
+GHSA-9ppj-qmqm-q256
+GHSA-gvwx-54wh-qm9j
+GHSA-qffp-2rhf-9h96
+GHSA-r292-9mhp-454m
+GHSA-r6q2-hw4h-h46w
+GHSA-vmf3-w455-68vh
+GHSA-w8wr-v893-vjvp
+GHSA-73rr-hh4g-fpgx
+GHSA-fjxv-7rqg-78g4
+GHSA-hmw2-7cc7-3qxx
+GHSA-2883-xcg3-v3hh
+GHSA-52cp-r559-cp3m
+GHSA-5p4m-2wfm-xmqj
+GHSA-h67p-54hq-rp68
+GHSA-mh29-5h37-fv8m
+GHSA-hw8r-x6gr-5gjp
+GHSA-pppg-cpfq-h7wr
+GHSA-23c5-xmqv-rm74
+GHSA-3ppc-4f35-3m26
+GHSA-7r86-cg39-jmmj
+GHSA-28wg-ghj8-5hjv
+GHSA-2v37-7h3g-55p8
+GHSA-mwcw-c2x4-8c55
+GHSA-xwg4-73v4-xw9w
+GHSA-fc5q-39xc-vjpf
+GHSA-4mjr-xmp4-gh2g
+GHSA-6rw7-vpxm-498p
+GHSA-p8p7-x288-28g6
+GHSA-5c6j-r48x-rmvq
+GHSA-76p7-773f-r4q5
+GHSA-m5mm-p8h7-m29v
+GHSA-qj8w-gfj5-8c6v
+GHSA-72xf-g2v4-qvf3
+GHSA-w5hq-g745-h8pq
+
+# npm packages (new CVE IDs from Trivy) - not exploitable via action runtime
+# minimatch - devDep only (eslint/mocha)
+CVE-2026-118764
+# picomatch - fast-glob file path matching, paths from trusted workflow config
+CVE-2026-112366
+# postcss-selector-parser - not in project node_modules, found in Node 24 image, action never processes CSS
+CVE-2026-104844
+# qs - k8s-super-client#request, query params not user-controlled
+CVE-2025-15284
+CVE-2026-82417
+# request - deprecated HTTP client in k8s-super-client, only for K8s API calls
+CVE-2023-28155
+# tar - new CVE IDs (same package, same reason - action never extracts tar archives)
+CVE-2026-59873
+CVE-2026-23745
+CVE-2026-23950
+CVE-2026-24842
+CVE-2026-26960
+CVE-2026-29786
+CVE-2026-31802
+CVE-2026-59874
+CVE-2026-73566
+CVE-2026-53655
+CVE-2026-59871
+CVE-2026-59875
+# tough-cookie - cookie handling in k8s-super-client#request, action makes no cookie-based requests
+CVE-2023-26136
+# undici - built into Node 24, action never uses WebSocket/EventSource or custom Agent config
+CVE-2026-109383
+CVE-2026-109869
+CVE-2026-19534
+CVE-2026-87018
+CVE-2026-109924
+CVE-2026-109932
+CVE-2026-85024
+CVE-2026-18540
+# uuid - UUID generation in k8s-super-client, not exploitable via action inputs
+CVE-2026-41907
+
+# helm gobinary - action uses helm only to template trusted Helm charts from workflow config
+GO-2026-5932
+CVE-2026-78661
+CVE-2026-97045
+CVE-2026-111943
+CVE-2026-97054
+
+# kustomize gobinary - kustomize processes local workspace files only, no untrusted network input
+CVE-2026-56851
+CVE-2026-56852
+CVE-2024-24786
+CVE-2024-24790
+CVE-2025-68121
+CVE-2023-45283
+CVE-2023-45288
+CVE-2024-34156
+CVE-2025-61726
+CVE-2025-61729
+CVE-2026-25679
+CVE-2026-27145
+CVE-2026-32280
+CVE-2026-32281
+CVE-2026-32283
+CVE-2026-33811
+CVE-2026-33814
+CVE-2026-33818
+CVE-2026-39820
+CVE-2026-39821
+CVE-2026-39822
+CVE-2026-39836
+CVE-2026-42499
+CVE-2026-42504
+CVE-2026-56853
+CVE-2026-56858
+CVE-2026-56859
+CVE-2026-56860
+CVE-2026-56862
+CVE-2026-78667
+CVE-2026-78669
+CVE-2026-97031
+CVE-2023-39326
+CVE-2023-45284
+CVE-2023-45289
+CVE-2023-45290
+CVE-2024-24783
+CVE-2024-24784
+CVE-2024-24785
+CVE-2024-24789
+CVE-2024-24791
+CVE-2024-34155
+CVE-2024-34158
+CVE-2024-45336
+CVE-2025-0913
+CVE-2025-22866
+CVE-2025-22870
+CVE-2025-22871
+CVE-2025-22873
+CVE-2025-4673
+CVE-2025-47906
+CVE-2025-47907
+CVE-2025-47912
+CVE-2025-58183
+CVE-2025-58185
+CVE-2025-58187
+CVE-2025-58188
+CVE-2025-58189
+CVE-2025-61723
+CVE-2025-61724
+CVE-2025-61725
+CVE-2025-61727
+CVE-2025-61728
+CVE-2025-61730
+CVE-2026-27142
+CVE-2026-32282
+CVE-2026-32288
+CVE-2026-32289
+CVE-2026-39823
+CVE-2026-39825
+CVE-2026-39826
+CVE-2026-42505
+CVE-2026-42507
+CVE-2026-56866
+CVE-2026-78659
+CVE-2026-78660
+CVE-2026-78663
+CVE-2026-94439
+CVE-2026-94440
+CVE-2026-94448
+CVE-2026-97030
+CVE-2026-97032
+CVE-2024-45341
+CVE-2025-58186
+CVE-2026-27139
+CVE-2026-56857
+
+# brace-expansion - devDep only via minimatch -> eslint/mocha
+CVE-2026-102276
+CVE-2026-102277
+CVE-2026-102278
+# form-data - action never sends multipart form data
+CVE-2025-7783
+CVE-2026-12143
+# glob - devDep only via mocha/eslint
+CVE-2026-118773
+# ip-address - not in project node_modules, found in Docker image, action never does IP validation
+CVE-2026-101910
+CVE-2026-101911
+CVE-2026-101912
+CVE-2026-101913
+CVE-2026-111997
+# jsonpath-plus - CVE IDs for same RCE already analyzed, action never runs JSONPath on user-controlled data
+CVE-2024-21534
+CVE-2025-1302
+# lodash - via the-lodash prod dep, action never calls _.template() on user input or uses _.unset/_.omit on user-controlled prototype chains
+CVE-2026-4800
+CVE-2025-13465
