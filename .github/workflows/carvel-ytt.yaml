@@ -24,7 +24,7 @@ jobs:
 
       - name: Run Carvel-YTT
         id: carvel-ytt-template
-        uses: vmware-tanzu/carvel-setup-action@a173dc9b83a0de22af92463294fb66b904d8b2a3 # v2.0.0
+        uses: vmware-tanzu/carvel-setup-action@efbf2625e8469080d87175c02690634d4b0ad476 # v2.2.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - run: |
