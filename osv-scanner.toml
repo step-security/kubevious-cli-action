@@ -1,0 +1,167 @@
+[[IgnoredVulns]]
+id = "GHSA-23hp-3jrh-7fpw"
+reason = "tar path traversal via @kubernetes/client-node - action never extracts tar archives at runtime"
+
+[[IgnoredVulns]]
+id = "GHSA-34x7-hfp2-rc4v"
+reason = "tar path traversal via @kubernetes/client-node - action never extracts tar archives at runtime"
+
+[[IgnoredVulns]]
+id = "GHSA-83g3-92jg-28cx"
+reason = "tar path traversal via @kubernetes/client-node - action never extracts tar archives at runtime"
+
+[[IgnoredVulns]]
+id = "GHSA-8qq5-rm4j-mr97"
+reason = "tar path traversal via @kubernetes/client-node - action never extracts tar archives at runtime"
+
+[[IgnoredVulns]]
+id = "GHSA-8x88-c5mf-7j5w"
+reason = "tar path traversal via @kubernetes/client-node - action never extracts tar archives at runtime"
+
+[[IgnoredVulns]]
+id = "GHSA-9ppj-qmqm-q256"
+reason = "tar path traversal via @kubernetes/client-node - action never extracts tar archives at runtime"
+
+[[IgnoredVulns]]
+id = "GHSA-gvwx-54wh-qm9j"
+reason = "tar path traversal via @kubernetes/client-node - action never extracts tar archives at runtime"
+
+[[IgnoredVulns]]
+id = "GHSA-qffp-2rhf-9h96"
+reason = "tar path traversal via @kubernetes/client-node - action never extracts tar archives at runtime"
+
+[[IgnoredVulns]]
+id = "GHSA-r292-9mhp-454m"
+reason = "tar path traversal via @kubernetes/client-node - action never extracts tar archives at runtime"
+
+[[IgnoredVulns]]
+id = "GHSA-r6q2-hw4h-h46w"
+reason = "tar path traversal via @kubernetes/client-node - action never extracts tar archives at runtime"
+
+[[IgnoredVulns]]
+id = "GHSA-vmf3-w455-68vh"
+reason = "tar path traversal via @kubernetes/client-node - action never extracts tar archives at runtime"
+
+[[IgnoredVulns]]
+id = "GHSA-w8wr-v893-vjvp"
+reason = "tar path traversal via @kubernetes/client-node - action never extracts tar archives at runtime"
+
+# diff - devDependency only (mocha, ts-node)
+[[IgnoredVulns]]
+id = "GHSA-73rr-hh4g-fpgx"
+reason = "diff is used only by mocha/ts-node devDependencies, not in action runtime"
+
+# form-data - action only makes GET requests, form-data constructor never called, prototype pollution not triggered
+[[IgnoredVulns]]
+id = "GHSA-fjxv-7rqg-78g4"
+reason = "form-data via k8s-super-client#request - action never instantiates FormData, prototype pollution code path never reached; no fix available upstream"
+
+[[IgnoredVulns]]
+id = "GHSA-hmw2-7cc7-3qxx"
+reason = "form-data via k8s-super-client#request - action never instantiates FormData, prototype pollution code path never reached; no fix available upstream"
+
+# js-yaml - action parses YAML via yaml package, js-yaml only used internally by @kubernetes/client-node
+[[IgnoredVulns]]
+id = "GHSA-2883-xcg3-v3hh"
+reason = "js-yaml via @kubernetes/client-node - action uses yaml package for parsing, js-yaml not called on user input"
+
+[[IgnoredVulns]]
+id = "GHSA-52cp-r559-cp3m"
+reason = "js-yaml via @kubernetes/client-node - action uses yaml package for parsing, js-yaml not called on user input"
+
+[[IgnoredVulns]]
+id = "GHSA-5p4m-2wfm-xmqj"
+reason = "js-yaml via @kubernetes/client-node - action uses yaml package for parsing, js-yaml not called on user input"
+
+[[IgnoredVulns]]
+id = "GHSA-h67p-54hq-rp68"
+reason = "js-yaml via @kubernetes/client-node - action uses yaml package for parsing, js-yaml not called on user input"
+
+[[IgnoredVulns]]
+id = "GHSA-mh29-5h37-fv8m"
+reason = "js-yaml via @kubernetes/client-node - action uses yaml package for parsing, js-yaml not called on user input"
+
+# jsonpath-plus - RCE requires malicious K8s API server response; only triggered via --live-k8s against user's own trusted cluster; no fix in k8s-super-client
+[[IgnoredVulns]]
+id = "GHSA-hw8r-x6gr-5gjp"
+reason = "jsonpath-plus via @kubernetes/client-node - RCE requires malicious K8s server response; action only connects to user's own trusted cluster via KUBECONFIG; no fix available in k8s-super-client"
+
+[[IgnoredVulns]]
+id = "GHSA-pppg-cpfq-h7wr"
+reason = "jsonpath-plus via @kubernetes/client-node - RCE requires malicious K8s server response; action only connects to user's own trusted cluster via KUBECONFIG; no fix available in k8s-super-client"
+
+# minimatch - devDependency only (eslint, mocha)
+[[IgnoredVulns]]
+id = "GHSA-23c5-xmqv-rm74"
+reason = "minimatch is used only by eslint/mocha devDependencies, not in action runtime"
+
+[[IgnoredVulns]]
+id = "GHSA-3ppc-4f35-3m26"
+reason = "minimatch is used only by eslint/mocha devDependencies, not in action runtime"
+
+[[IgnoredVulns]]
+id = "GHSA-7r86-cg39-jmmj"
+reason = "minimatch is used only by eslint/mocha devDependencies, not in action runtime"
+
+# nanoid - devDependency only (mocha)
+[[IgnoredVulns]]
+id = "GHSA-28wg-ghj8-5hjv"
+reason = "nanoid is used only by mocha devDependency, not in action runtime"
+
+[[IgnoredVulns]]
+id = "GHSA-2v37-7h3g-55p8"
+reason = "nanoid is used only by mocha devDependency, not in action runtime"
+
+[[IgnoredVulns]]
+id = "GHSA-mwcw-c2x4-8c55"
+reason = "nanoid is used only by mocha devDependency, not in action runtime"
+
+[[IgnoredVulns]]
+id = "GHSA-xwg4-73v4-xw9w"
+reason = "nanoid is used only by mocha devDependency, not in action runtime"
+
+# picomatch - used by fast-glob for file path matching, paths come from workflow config not user input
+[[IgnoredVulns]]
+id = "GHSA-fc5q-39xc-vjpf"
+reason = "picomatch via fast-glob - file paths sourced from workflow config, not arbitrary user input"
+
+# qs - HTTP query string parsing in k8s-super-client, query params not user-controlled
+[[IgnoredVulns]]
+id = "GHSA-4mjr-xmp4-gh2g"
+reason = "qs via k8s-super-client#request - HTTP query params not user-controlled"
+
+[[IgnoredVulns]]
+id = "GHSA-6rw7-vpxm-498p"
+reason = "qs via k8s-super-client#request - HTTP query params not user-controlled"
+
+# request - SSRF requires malicious K8s API server sending cross-protocol redirect; same trusted-cluster argument applies; deprecated with no fix
+[[IgnoredVulns]]
+id = "GHSA-p8p7-x288-28g6"
+reason = "request via k8s-super-client - SSRF requires K8s API server to redirect cross-protocol, implying already-compromised cluster; no fix available, request is deprecated"
+
+# serialize-javascript - devDependency only (mocha)
+[[IgnoredVulns]]
+id = "GHSA-5c6j-r48x-rmvq"
+reason = "serialize-javascript is used only by mocha devDependency, not in action runtime"
+
+[[IgnoredVulns]]
+id = "GHSA-76p7-773f-r4q5"
+reason = "serialize-javascript is used only by mocha devDependency, not in action runtime"
+
+[[IgnoredVulns]]
+id = "GHSA-m5mm-p8h7-m29v"
+reason = "serialize-javascript is used only by mocha devDependency, not in action runtime"
+
+[[IgnoredVulns]]
+id = "GHSA-qj8w-gfj5-8c6v"
+reason = "serialize-javascript is used only by mocha devDependency, not in action runtime"
+
+# tough-cookie - cookie handling in k8s-super-client#request, action makes no cookie-based requests
+[[IgnoredVulns]]
+id = "GHSA-72xf-g2v4-qvf3"
+reason = "tough-cookie via k8s-super-client#request - action makes no cookie-based HTTP requests"
+
+# uuid - UUID generation in k8s-super-client, not exploitable
+[[IgnoredVulns]]
+id = "GHSA-w5hq-g745-h8pq"
+reason = "uuid via k8s-super-client - UUID generation only, not exploitable via action inputs"
